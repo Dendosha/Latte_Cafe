@@ -508,7 +508,7 @@ body.--locked {
   grid-row: span 2;
 }
 
-.booking__image > img {
+.booking__image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -604,7 +604,7 @@ body.--locked {
     background-color: transparent;
   }
 
-  .--burger > svg {
+  .--burger svg {
     fill: var(--accent-text-color);
   }
 
