@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<title>Главная</title>
+
+	<!-- Контролирует поведение поисковых систем при индексации страницы -->
+	<!-- Для запрета индексации необходимо указать значение "none" -->
+	<!-- <meta name="robots" content="index,follow,noodp"> --> <!-- Все поисковые системы -->
+	<!-- <meta name="googlebot" content="index,follow"> --> <!-- Указание отдельно для Google -->
+
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+
+	<link rel="stylesheet" href="css/style.min.css?_v=20230304221001">
+	<script defer src="js/app.min.js?_v=20230304221001"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="home">
+	<h1 class="--visually-hidden">Latte Cafe</h1>
+	<div class="header__container --container">
+		<div class="header__menu menu">
+			<button class="menu__burger --burger" aria-controls="primary-navigation" aria-expanded="false">
+				<svg viewBox="0 0 100 80" aria-hidden="true">
+					<rect x="10" y="15" width="80" height="10" rx="5"></rect>
+					<rect x="10" y="35" width="80" height="10" rx="5"></rect>
+					<rect x="10" y="55" width="80" height="10" rx="5"></rect>
+				</svg>
+			</button>
+			<nav data-visible="false" id="primary-navigation" class="menu__body" aria-label="Primary">
+				<ul class="menu__list">
+					<li><a href="#about-us" class="menu__link">About</a></li>
+					<li><a href="#menu" class="menu__link">Menu</a></li>
+					<li><a href="#info" class="menu__link">Info</a></li>
+					<li><a href="#booking" class="menu__link">Booking</a></li>
+				</ul>
+			</nav>
+		</div>
+		<a href="index.html" class="header__logo">
+			<img src="img/header/logo.svg" alt="Latte Cafe logo">
+		</a>
+		<div class="header__social social">
+			<ul class="social__list">
+				<li><a href="#" class="social__link --icon-mail"></a></li>
+				<li><a href="#" class="social__link --icon-facebook"></a></li>
+				<li><a href="#" class="social__link --icon-instagram"></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="hero --container">
+		<picture><source srcset="img/hero/cafe-image.webp" type="image/webp"><img src="img/hero/cafe-image.jpg" alt="Cafe appearance" class="hero__image"></picture>
+	</div>
+</header>
+		<main class="page">
+			<section class="page__about-us about-us" id="about-us">
+				<div class="about-us__container --container">
+					<div class="about-us__text-block text-block">
+						<h2 class="text-block__title">About Us</h2>
+						<p class="text-block__text">Tucked away in the corner of Wellington, Latte Cafe is a local neighbourhood
+							cafe and bar. Latte is all about doing what we love, in a city that we love. We keep stocked with local
+							produce and pastries. Bring your family for a bite, or meet your friends for a coffee or warm drink.</p>
+					</div>
+				</div>
+			</section>
+			<section class="page__cafe-menu cafe-menu" id="menu">
+				<div class="cafe-menu__container --container">
+					<div class="cafe-menu__column">
+						<div class="cafe-menu__text-block text-block">
+							<h2 class="text-block__title">Menu</h2>
+							<p class="text-block__text">We change our menu every season. Here is what we are currently dishing up.</p>
+						</div>
+						<ul class="cafe-menu__tablist" role="tablist" data-controls="menu-tabs">
+							<li>
+								<a class="cafe-menu__tab-button" role="tab" id="food-menu-tab" aria-controls="food-menu"
+									aria-selected="true" tabindex="0">Food Menu</a>
+							</li>
+							<li>
+								<a class="cafe-menu__tab-button" role="tab" id="drinks-menu-tabs" aria-controls="drinks-menu"
+									aria-selected="false" tabindex="-1">Drinks Menu</a>
+							</li>
+							<li>
+								<a class="cafe-menu__tab-button" role="tab" id="takeaway-menu-tabs" aria-controls="takeaway-menu"
+									aria-selected="false" tabindex="-1">Takeaway Menu</a>
+							</li>
+						</ul>
+					</div>
+					<div class="cafe-menu__column cafe-menu__tabs-content" id="menu-tabs">
+						<section class="cafe-menu__tabpanel" role="tabpanel" id="food-menu" aria-labelledby="food-menu-tab">
+							<h3 class="--visually-hidden">Food Menu</h3>
+							<picture><source srcset="img/menu/food-menu.webp" type="image/webp"><img src="img/menu/food-menu.jpg" alt="Food Menu"></picture>
+						</section>
+						<section class="cafe-menu__tabpanel" role="tabpanel" id="drinks-menu" aria-labelledby="drinks-menu-tabs"
+							hidden>
+							<h3 class="--visually-hidden">Drinks Menu</h3>
+							<picture><source srcset="img/menu/drinks-menu.webp" type="image/webp"><img src="img/menu/drinks-menu.jpg" alt="Drinks Menu"></picture>
+						</section>
+						<section class="cafe-menu__tabpanel" role="tabpanel" id="takeaway-menu" aria-labelledby="takeaway-menu-tabs"
+							hidden>
+							<h3 class="--visually-hidden">Takeaway Menu</h3>
+							<picture><source srcset="img/menu/takeaway-menu.webp" type="image/webp"><img src="img/menu/takeaway-menu.jpg" alt="Takeaway Menu"></picture>
+						</section>
+					</div>
+				</div>
+			</section>
+			<section class="page__info info" id="info">
+				<h2 class="--visually-hidden">Info</h2>
+				<div class="info__container --container">
+					<article class="info__column">
+						<h3 class="info__column-title">Location</h3>
+						<p class="info__column-text">
+							<span>101 Cuba St,</span>
+							<span>Te Aro, Wellington</span>
+						</p>
+					</article>
+					<article class="info__column">
+						<h3 class="info__column-title">Hours</h3>
+						<p class="info__column-text">
+							<span>Tuesday to Friday</span>
+							<span>7AM - 3PM</span>
+						</p>
+						<p class="info__column-text">
+							<span>Saturday to Sunday</span>
+							<span>8AM - 3PM</span>
+						</p>
+					</article>
+					<article class="info__column">
+						<h3 class="info__column-title">Mondays?</h3>
+						<p class="info__column-text">
+							<span>We are closed on Mondays</span>
+							<span>to reflect and refuel</span>
+						</p>
+					</article>
+				</div>
+			</section>
+			<section class="page__booking booking" id="booking">
+				<div class="booking__container --container">
+					<div class="booking__image">
+						<picture><source srcset="img/booking/1.webp" type="image/webp"><img src="img/booking/1.jpg" alt="First booking picture"></picture>
+					</div>
+					<div class="booking__image">
+						<picture><source srcset="img/booking/2.webp" type="image/webp"><img src="img/booking/2.jpg" alt="Second booking picture"></picture>
+					</div>
+					<div class="booking__image booking__image_big">
+						<picture><source srcset="img/booking/3.webp" type="image/webp"><img src="img/booking/3.jpg" alt="Third booking picture"></picture>
+					</div>
+				</div>
+			</section>
+			<section class="page__award-winning award-winning">
+				<div class="award-winning__container --container">
+					<div class="award-winning__text-block">
+						<h2 class="award-winning__text-block-title">Award winning cafe&nbsp;pand&nbsp;bar.</h2>
+						<p class="award-winning__text-block-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+							do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footer__container --container">
+		<div class="footer__menu footer-menu">
+			<nav data-visible="false" id="footer-navigation" class="footer-menu__body" aria-label="Footer">
+				<ul class="footer-menu__list">
+					<li><a href="#home" class="footer-menu__link">Home</a></li>
+					<li><a href="#about-us" class="footer-menu__link">About</a></li>
+					<li><a href="#menu" class="footer-menu__link">Menu</a></li>
+					<li><a href="#info" class="footer-menu__link">Info</a></li>
+					<li><a href="#" class="footer-menu__link">Contact</a></li>
+					<li><a href="#booking" class="footer-menu__link">Bookings</a></li>
+					<li><a href="#" class="footer-menu__link">Privacy&nbsp;Policy</a></li>
+					<li><a href="#" class="footer-menu__link">Style&nbsp;Guide</a></li>
+					<li><a href="#" class="footer-menu__link">Licenses</a></li>
+					<li><a href="#" class="footer-menu__link">Instructions</a></li>
+					<li><a href="#" class="footer-menu__link">Changelog</a></li>
+					<li><a href="#" class="footer-menu__link">Password</a></li>
+					<li><a href="#" class="footer-menu__link">404</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="footer__copyright">
+			<span>© Latte Cafe 2022.</span>
+			<span>Built by <a href="#">Nikolai Bain</a></span>
+			<span>Powered by <a href="#">Webflow</a></span>
+		</div>
+	</div>
+</footer>
+	</div>
+</body>
+
+</html>
